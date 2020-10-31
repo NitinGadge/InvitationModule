@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FragmentInvitations">
+
+    <FrameLayout
+        android:id="@+id/frameOne"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/main_shape" />
+
+    <FrameLayout
+        android:id="@+id/frameTwo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/frameOne" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/buttonGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/rounded_shape"
+        android:gravity="center"
+        app:singleSelection="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGoing"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/nunito_semi_bold"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Going"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:cornerRadius="20dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnWont"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_semi_bold"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Won't be visiting"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:cornerRadius="5dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnMaybe"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/nunito_semi_bold"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Maybe"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            app:cornerRadius="20dp" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvGoing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:paddingHorizontal="10dp"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_invitations" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvWontGoing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_red_dark"
+            android:paddingHorizontal="10dp"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMaybe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/holo_green_dark"
+            android:paddingHorizontal="10dp"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    </FrameLayout>
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/createInvitation"
+            android:checked="true"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/create_invitation" />
+        <item
+            android:id="@+id/myEvents"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/my_events" />
+        <item
+            android:id="@+id/invitations"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/invitations" />
+
+    </group>
+    <item android:title="">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/notifications"
+                    android:icon="@mipmap/ic_launcher"
+                    android:title="@string/notifications" />
+                <item
+                    android:id="@+id/profile"
+                    android:icon="@mipmap/ic_launcher"
+                    android:title="@string/profile" />
+                <item
+                    android:id="@+id/logout"
+                    android:icon="@mipmap/ic_launcher"
+                    android:title="@string/logout" />
+            </group>
+        </menu>
+    </item>
+</menu>

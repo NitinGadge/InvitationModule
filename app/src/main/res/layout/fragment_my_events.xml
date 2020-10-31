@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FragmentMyEvents">
+
+    <FrameLayout
+        android:id="@+id/frameOne"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/main_shape" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20sp"
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="25dp">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:paddingHorizontal="10sp"
+            android:searchSuggestThreshold="2"
+            app:queryBackground="@android:color/transparent"
+            app:iconifiedByDefault="false"
+            app:queryHint="@string/search_event"
+            app:searchHintIcon="@null" />
+
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progressMyEvents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMyEvents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cardSearchView"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:itemCount="1"
+        tools:listitem="@layout/item_my_events" />
+
+    <FrameLayout
+        android:id="@+id/frameTwo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/frameOne"
+        android:background="@android:color/transparent" />
+
+</RelativeLayout>
